@@ -34,3 +34,23 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**节点的层次**——从根到该节点的层数（根节点为第1层）。
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**树的深度（或高度）**——指所有节点中最大的层数。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**路径**——树中两个节点之间的所经过的节点序列。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**路径长度**——两节点之间路径上经过的边数。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**双亲、孩子**——节点的子树的根称为该节点的孩子。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**兄弟**——双亲相同的节点互称兄弟。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**堂兄弟**——双亲是兄弟的节点互称堂兄弟。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**祖先**——即从该节点到树根经过的所有节点，称为该节点的祖先。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**子孙**——节点的子树中的所有节点都称为该节点的子孙。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**有序树**——节点的各子树从左至右有序，不能互换位置。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**无序树**——节点各子树可互换位置。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**森林**——由m（m≥0）棵不相交的树组成的集合。
