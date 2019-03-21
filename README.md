@@ -61,5 +61,11 @@
 ## 二叉树
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二叉树（Binary Tree）是n（n≥0）个节点所构成的集合，它或为空树（n=0）；或为非空树。对于非空树T满足：
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1)有且仅有一个称为根的节点；
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2)除根节点以外，其余节点分为两个互不相交的子集T1和T2，分别称为T的左子树和右子树，且T1和T2本身都是二叉树。
+
+### 二叉树的性质
+
+
