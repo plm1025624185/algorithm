@@ -1,5 +1,8 @@
 package main.tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 import main.exception.IllegalTypeException;
 
 /**
@@ -288,6 +291,37 @@ public class BinaryTree {
 			lrd(sb, node.rchild);
 			//最后访问根
 			sb.append(node.data);
+		}
+	}
+	
+	/**
+	 * 层次遍历
+	 * @return
+	 */
+	public String levelTraversal() {
+		StringBuilder sb = new StringBuilder();
+		Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+		levelTraversal(sb,root, queue);
+		return sb.toString();
+	}
+	
+	/**
+	 * 层次遍历
+	 * 
+	 * 概述：层次遍历是从低层级到高层级进行节点遍历
+	 * 
+	 * @param sb
+	 * @param node
+	 * @param queue
+	 */
+	private void levelTraversal(StringBuilder sb, BinaryNode node, Queue<BinaryNode> queue) {
+		if(node != null) {
+			sb.append(node.data);
+			queue.add(node.lchild);
+			queue.add(node.rchild);
+		}
+		if(!queue.isEmpty()) {
+			levelTraversal(sb, queue.poll(),queue);
 		}
 	}
 	

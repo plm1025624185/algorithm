@@ -49,6 +49,12 @@ public class BinaryTreeTest {
 	}
 	
 	@Test
+	public void testLevelTraversal() {
+		assertEquals(pmBtree.levelTraversal(), "ABECFGDHJI");
+		assertEquals(mpBtree.levelTraversal(), "ABECFGDHJI");
+	}
+	
+	@Test
 	public void testDepth() {
 		assertEquals(btree.depth(), 4);
 	}
