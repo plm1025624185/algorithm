@@ -7,19 +7,18 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import main.graph.AdjacencyMatrixGraph;
+import main.graph.AdjacencyTableGraph;
 import main.graph.Edge;
 
 @RunWith(JUnit4.class)
-public class AdjacencyMatrixGraphTest {
-	
-	private AdjacencyMatrixGraph<String> amGraph;
-	
-	private AdjacencyMatrixGraph<String> amGraphOrder;
+public class AdjacencyTableGraphTest {
+	private AdjacencyTableGraph<String> atGraph;
+	private AdjacencyTableGraph<String> atGraphOrder;
 	
 	@SuppressWarnings("unchecked")
 	@Before
 	public void init() {
+		// 无向邻接表
 		String[] nodes = new String[] {
 				"a", "b", "c", "d"
 		};
@@ -30,9 +29,8 @@ public class AdjacencyMatrixGraphTest {
 				new Edge<String>("b", "c"),
 				new Edge<String>("c", "d")
 		};
-		//创建无向图
-		amGraph = new AdjacencyMatrixGraph<>(nodes, edges, false);
-		
+		atGraph = new AdjacencyTableGraph<>(nodes, edges, false);
+		// 有向邻接表
 		String[] nodesOrder = new String[] {
 				"a", "b", "c", "d", "e"
 		};
@@ -46,27 +44,26 @@ public class AdjacencyMatrixGraphTest {
 				new Edge<String>("d", "e"),
 				new Edge<String>("d", "a")
 		};
-		//创建有向图
-		amGraphOrder = new AdjacencyMatrixGraph<>(nodesOrder, edgesOrder, true);
+		atGraphOrder = new AdjacencyTableGraph<>(nodesOrder, edgesOrder, true);
 	}
 	
 	@Test
-	public void testCreate() {
-		System.out.println("无向图的邻阶矩阵：");
-		System.out.println(amGraph.toString());
-		System.out.println("有向图的邻阶矩阵：");
-		System.out.println(amGraphOrder.toString());
+	public void create() {
+		System.out.println("-------------邻接无向图------------");
+		System.out.println(atGraph.toString());
+		System.out.println("-------------邻接有向图------------");
+		System.out.println(atGraphOrder.toString());
 	}
 	
 	@Test
 	public void testDepthFirstSearch() {
-		assertEquals("abcd", amGraph.depthFirstSearch());
-		assertEquals("abcde", amGraphOrder.depthFirstSearch());
+		assertEquals("abcd", atGraph.depthFirstSearch());
+		assertEquals("abcde", atGraphOrder.depthFirstSearch());
 	}
 	
 	@Test
 	public void testBreadthFirstSearch() {
-		assertEquals("abdc", amGraph.breadthFirstSearch());
-		assertEquals("abced", amGraphOrder.breadthFirstSearch());
+		assertEquals("abdc", atGraph.breadthFirstSearch());
+		assertEquals("abced", atGraphOrder.breadthFirstSearch());
 	}
 }
