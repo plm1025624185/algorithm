@@ -13,6 +13,7 @@ public class AdjacencyMatrixGraph<T> {
 	private T[] nodes; //顶点集合
 	private int[][] amGraph; //邻阶矩阵数据
 	
+	
 	private boolean[] visited; //是否被访问过的集合
 	
 	public AdjacencyMatrixGraph() {}
